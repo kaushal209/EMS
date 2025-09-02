@@ -1,14 +1,42 @@
 /* ====== Default css : start ====== */
 
 :root {
-  --primary-color: #C32D1C;
-  --secondary-color: #090909;
-  --light-color: #FFFFFF;
-  --dark-color: #000000;
-  --border-color: #E5E5E5;
-  --shadow-color: rgba(0, 0, 0, 0.1);
-  --font-family-primary: "futura-pt", sans-serif;
-  --font-family-secondary: "ivyora-display", serif;
+  --primary-color: #F5F5F5;
+  --secondary-color: #111111;
+  --one-number-color: #1E0C06;
+  --second-number-color: #222021;
+  --third-number-color: #32353C;
+  --fourth-number-color: #5B6069;
+  --fifth-number-color: #848891;
+  --sixth-number-color: #7D746D;
+  --seventh-number-color: #D2C8C6;
+  --eighth-number-color: #F1DED0;
+  --ninth-number-color: #664033;
+  --tenth-number-color: #6C200B;
+  --eleventh-number-color: #8E3921;
+  --twelfth-number-color: #E1764D;
+  --thirteenth-number-color: #E59679;
+  --fourteenth-number-color: #FB9E6E;
+  --fifteenth-number-color: #FFC099;
+  --sixteenth-number-color: #FFDBBB;
+  --seventeenth-number-color: #5F7489;
+  --eighteenth-number-color: #728BAD;
+  --nineteenth-number-color: #A3B8D7;
+  --twentieth-number-color: #D5DCEE;
+  --twenty-first-number-color: #B0B4BD;
+  --twenty-second-number-color: #7A574B;
+  --twenty-third-number-color: #9F8578;
+  --twenty-fourth-number-color: #C8B2A7;
+
+
+
+  --font-family-heading: "KyivType Sans Medium";
+  --font-family-text: "Inter";
+
+
+
+  --font-big: 90px;
+  --font-small: 30px;
 }
 
 *,
@@ -31,12 +59,12 @@ body {
 
 body { 
   position: relative; 
-  font-family: "futura-pt"; 
-  font-weight: normal; 
+  font-family: var(--font-family-text); 
+  font-weight: 500; 
   font-size: 16px; 
   line-height: normal; 
-  background: #090909; 
-  color: #FFFFFF; 
+  background: var(--second-number-color);
+  color: var(--primary-color); 
 }
 
 body.open-nav { overflow: hidden; }
@@ -67,14 +95,13 @@ h4,
 h5,
 h6 { margin: 0; padding: 0; }
 
-.btnbox { display: flex; }
+.primary_btn { display: flex; justify-content: center; align-items: center; height: 58px; padding: 0 70px; font-size: var(--font-small); font-weight: 700; color: var(--primary-color); transition: all 0.3s ease-in-out; }
+.primary_btn:hover { background: var(--twentieth-number-color); color: var(--eleventh-number-color); }
 
-.primary_btn { display: flex; justify-content: center; align-items: center; height: 48px; padding: 0 22px; border: 1px solid #FFFFFF; font-family: "futura-pt"; font-size: 18px; font-weight: 400; letter-spacing: 0.05em; line-height: 1.28; color: #FFFFFF; transition: all 0.3s ease-in-out; text-transform: uppercase; }
-.primary_btn:hover { background: #FFFFFF; color: #090909; }
+h1 { font-family: var(--font-family-heading); font-style: normal; font-size: var(--font-big); line-height: 115.4%; color: var(--primary-color); font-weight: 500; }
+h2 { font-family: var(--font-family-heading); font-style: normal; font-size: var(--font-big); line-height: 132.9%; color: var(--primary-color); font-weight: 500; }
 
-h1 { font-family: "ivyora-display"; font-style: italic; font-size: 82px; line-height: 1.20; color: #FFFFFF; font-weight: 400; letter-spacing: 0.05em; }
-h2 { font-family: "ivyora-display"; font-style: italic; font-size: 45px; line-height: 1.2; color: #C32D1C; font-weight: 400; letter-spacing: 0.05em; }
-h3 { font-family: "futura-pt"; font-size: 22px; line-height: 1.31; text-transform: uppercase; color: #FFFFFF; font-weight: 500; letter-spacing: 0.05em; }
+p { font-family: var(--font-family-text); font-style: normal; font-weight: 500; font-size: var(--font-small); line-height: 99.1%; color: var(--primary-color); }
 
 .main_wrapper { position: relative; width: 100%; overflow: hidden; }
 
@@ -106,7 +133,7 @@ h3 { font-family: "futura-pt"; font-size: 22px; line-height: 1.31; text-transfor
 
 @media (min-width: 1400px) {
 	.container {
-		max-width: 1325px;
+		max-width: 1280px;
 	}
 }
 
