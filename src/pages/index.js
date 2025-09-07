@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>EMS || Home ||</title>
+        <title>Estatein || Home ||</title>
       </Head>
     </>
   );
