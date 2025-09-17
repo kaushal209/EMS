@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import crossIcon from '../../../public/cross-icon.svg';
 import estateinLogo from '../../../public/estatein-logo.svg';
 
@@ -12,6 +13,26 @@ const Header = () => {
 		e.preventDefault();
 		setShowDiscover(!showDiscover);
 	}
+
+    const pageLinks = [
+        { 
+            path: '/',
+            name: 'Home', 
+        },
+        { 
+            path: '/about',
+            name: 'About Us', 
+        },
+        { 
+            path: '/properties',
+            name: 'Properties', 
+        },
+        { 
+            path: '/services', 
+            name: 'Services', 
+        },
+    ];
+    const linkRoute = useRouter();
 
     return (
         <>
@@ -41,12 +62,17 @@ const Header = () => {
                             <Link href="/"><Image src={estateinLogo} alt="logo" width="160" height="48" /></Link>
                         </div>
                         <div className="navbar_part">
-                            <nav className="navbar">
-                                <ul>
-                                    <li><Link href="/">Home</Link></li>
-                                    <li><Link href="/">About Us</Link></li>
-                                    <li><Link href="/">Properties</Link></li>
-                                    <li><Link href="/">Services</Link></li>
+                            <nav className="navbar-block">
+                                <ul>                          
+                                    {pageLinks.map((pagesList, index) => {
+                                        const {path, name} = pagesList;
+                                        const isActive = linkRoute.pathname === path;
+                                        return (
+                                            <li key={index} className={isActive ? 'active' : ''}>
+                                                <Link href={path}>{name}</Link>
+                                            </li>
+                                        )
+								    })}
                                 </ul>
                             </nav>
                             <div className="contact-btn">

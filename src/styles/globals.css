@@ -145,9 +145,14 @@ p { font-weight: 500; font-size: 18px; line-height: 150%; color: var(--grey-shad
 
 /* ====== Default css : end ====== */
 
-/* ====== Custom css : start ====== */
+/* ======================== Custom css : start ======================== */
 
-.discover { padding: 15px 32px 16px 32px; background-color: var(--grey-shade-10); position: relative; border-bottom: 1px solid var(--grey-shade-15); background-image: url("../../public/bg-image.svg"); background-repeat: no-repeat; background-position: right center; background-size: cover; }
+/* Header */
+
+.header { border-bottom: 1px solid var(--grey-shade-15); position: relative; width: 100%; background-color: var(--grey-shade-10); }
+
+
+.discover { padding: 15px 32px 16px 32px; position: relative; border-bottom: 1px solid var(--grey-shade-15); background-image: url("../../public/bg-image.svg"); background-repeat: no-repeat; background-position: right center; background-size: cover; }
 .discover-section { display: flex; justify-content: space-between; align-items: center; gap: 10px; max-width: 1160px; margin-left: auto; position: relative; z-index: 1; }
 .discover-section .left-part { display: flex; align-items: center; position: relative; }
 .discover-section .left-part span { display: flex; font-weight: 500; font-size: 18px; line-height: 150%; color: var(--primary-color); }
@@ -160,4 +165,24 @@ p { font-weight: 500; font-size: 18px; line-height: 150%; color: var(--grey-shad
 .discover-section .right-part a i img { width: 100%; height: 100%; object-fit: cover; display: flex; }
 .discover-section .right-part a:hover { background: var(--purple-shade-70); }
 
-/* ====== Custom css : end ====== */
+
+.main_header { padding: 20px 0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+.main_header .logo { display: block; position: relative; }
+.main_header .logo a { display: flex; max-width: 160px; }
+.main_header .logo a img { width: 100%; height: auto; display: flex; }
+.main_header .navbar_part { display: flex; align-items: center; column-gap: 380px; }
+.main_header .navbar_part .navbar-block { position: relative; display: block; }
+.main_header .navbar_part .navbar-block ul { display: flex; align-items: center; column-gap: 6px; }
+.main_header .navbar_part .navbar-block ul li { position: relative; display: block; }
+.main_header .navbar_part .navbar-block ul li a { display: flex; justify-content: center; align-items: center; height: 55px; padding: 0 24px; border: 1px solid transparent; border-radius: 10px; font-weight: 500; font-size: 18px; line-height: 150%; color: var(--primary-color); transition: all 0.3s ease-in-out; }
+.main_header .navbar_part .navbar-block ul li a:hover { background: var(--grey-shade-08); border-color: var(--grey-shade-15); }
+.main_header .navbar_part .navbar-block ul li.active a { background: var(--grey-shade-08); border-color: var(--grey-shade-15); }
+.main_header .navbar_part .contact-btn { display: block; position: relative; }
+.main_header .navbar_part .contact-btn a { display: flex; justify-content: center; align-items: center; height: 59px; padding: 0 24px; border: 1px solid var(--grey-shade-15); background: var(--grey-shade-08); border-radius: 10px; font-weight: 500; font-size: 18px; line-height: 150%; color: var(--primary-color); transition: all 0.3s ease-in-out; }
+.main_header .navbar_part .contact-btn a:hover { background: var(--purple-shade-70); border-color: var(--purple-shade-70); }
+
+.menu-btn { display: none; }
+
+/* Header */
+
+/* ======================== Custom css : end ======================== */
